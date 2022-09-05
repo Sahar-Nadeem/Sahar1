@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    
+    <h1>Advance Pratice of JSON</h1>
+    <table border="6" id="demo">
+        <tr>
+            <th>name</th>
+            <th>lastname</th>
+            <th>fathername</th>
+            <th>Age</th>
+            <th>Id</th>
+            <th>Batch</th>
+            <th>Semester</th>
+            <th>state</th>
+            <th>City</th>
+            <th>Country</th>
+        </tr>
+    </table>
+    <script>
+        const students = [ {
+            name:"Anus",
+            lastname:"Ghouri",
+            fathername:"Akram Ghouri",
+            age:"20",
+            id:"1365966",
+            batch:"PR2-202202C",
+            semester:"First",
+            state:"Islam",
+            city:"Karachi",
+            country:"Pakistan"
+        },
+        {
+            name:"Anus",
+            lastname:"Ghouri",
+            fathername:"Akram Ghouri",
+            age:"20",
+            id:"1365966",
+            batch:"PR2-202202C",
+            semester:"2",
+            state:"Islam",
+            city:"Karachi",
+            country:"Pakistan"
+        },
+        {
+            name:"Anus",
+            lastname:"Ghouri",
+            fathername:"Akram Ghouri",
+            age:"20",
+            id:"1365966",
+            batch:"PR2-202202C",
+            semester:"First",
+            semest:"Islam",
+            city:"Karachi",
+            country:"Pakistan"
+        }
+        ]
+        
+        for(let i=0;i<students.length;i++){
+            if(students[i].age>18){
+                students[i].age="Adult";
+            }
+            else{
+                students[i].age="Under Age";
+            }
+            
+            
+            if(students[i].semester>1){
+                students[i].semester="CPISM";
+            }
+            else(students[i].semester="DISM")
+            document.getElementById("demo").innerHTML+=`
+            
+        <tr>
+            <td>${students[i].name}</td>
+            <td>${students[i].lastname}</td>
+            <td>${students[i].fathername}</td>
+            <td>${students[i].age}</td>
+            <td>${students[i].id}</td>
+            <td>${students[i].batch}</td>
+            <td>${students[i].semester}</td>
+            <td>${students[i].religion}</td>
+            <td>${students[i].city}</td>
+            <td>${students[i].country}</td>
+        </tr>
+            `
+        }
+        </script>
+
+
+    
+</body>
+</html>
